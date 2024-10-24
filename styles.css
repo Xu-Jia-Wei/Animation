@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  position: relative; /* 使定位上下文生效 */
+}
+
+.container {
+  position: relative; /* 为子元素提供定位上下文 */
+  width: 100%; /* 设置宽度为100% */
+  height: 100%; /* 设置高度为100% */
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  position: absolute; /* 使图片绝对定位 */
+  transform-origin: center center; /* 设置旋转和缩放的中心点 */
+}
+
+#image1 {
+  top: 0;
+  left: 0;
+}
+
+#image2 {
+  top: 35%; /* 垂直居中 */
+  left: 35%; /* 水平居中 */
+}
+
+#image3 {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes rotateAndShrink {
+  0% {
+      transform: rotate(0deg) scale(1);
+  }
+  100% {
+      transform: rotate(360deg) scale(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
